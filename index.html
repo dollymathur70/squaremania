@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>offset demo</title>
+    <style>
+         .pointer {cursor: pointer;}
+    </style>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="./wz_jsgraphics.js"></script>
+</head>
+<body>
+
+<div class="status" align="center">
+    <h1>SQUARE-MANIA</h1><br>
+    It's a two player game.<br>
+You have to form as many squares as you can by joining the two adjacent points(not diagonally).</div>
+<br>
+
+<div id="myCanvas" align="center">
+
+<img id="img1" src="dot.png" width="1%" hspace="2%" onclick="dotposition(1)" class="pointer">
+<img id="img2" src="dot.png" width="1%" hspace="2%" onclick="dotposition(2)" class="pointer">
+<img id="img3" src="dot.png" width="1%" hspace="2%" onclick="dotposition(3)" class="pointer">
+<img id="img4" src="dot.png" width="1%" hspace="2%" onclick="dotposition(4)" class="pointer">
+<img id="img5" src="dot.png" width="1%" hspace="2%" onclick="dotposition(5)" class="pointer">
+<img id="img6" src="dot.png" width="1%" hspace="2%" onclick="dotposition(6)" class="pointer">
+<img id="img7" src="dot.png" width="1%" hspace="2%" onclick="dotposition(7)" class="pointer">
+<img id="img8" src="dot.png" width="1%" hspace="2%" onclick="dotposition(8)" class="pointer">
+<img id="img9" src="dot.png" width="1%" hspace="2%" onclick="dotposition(9)" class="pointer">
+<img id="img10" src="dot.png" width="1%" hspace="2%" onclick="dotposition(10)" class="pointer">
+
+<br><br>
+<img id="img11" src="dot.png" width="1%" hspace="2%" onclick="dotposition(11)" class="pointer">
+<img id="img12" src="dot.png" width="1%" hspace="2%" onclick="dotposition(12)" class="pointer">
+<img id="img13" src="dot.png" width="1%" hspace="2%" onclick="dotposition(13)" class="pointer">
+<img id="img14" src="dot.png" width="1%" hspace="2%" onclick="dotposition(14)" class="pointer">
+<img id="img15" src="dot.png" width="1%" hspace="2%" onclick="dotposition(15)" class="pointer">
+<img id="img16" src="dot.png" width="1%" hspace="2%" onclick="dotposition(16)" class="pointer">
+<img id="img17" src="dot.png" width="1%" hspace="2%" onclick="dotposition(17)" class="pointer">
+<img id="img18" src="dot.png" width="1%" hspace="2%" onclick="dotposition(18)" class="pointer">
+<img id="img19" src="dot.png" width="1%" hspace="2%" onclick="dotposition(19)" class="pointer">
+<img id="img20" src="dot.png" width="1%" hspace="2%" onclick="dotposition(20)" class="pointer">
+
+<br><br>
+<img id="img21" src="dot.png" width="1%" hspace="2%" onclick="dotposition(21)" class="pointer">
+<img id="img22" src="dot.png" width="1%" hspace="2%" onclick="dotposition(22)" class="pointer">
+<img id="img23" src="dot.png" width="1%" hspace="2%" onclick="dotposition(23)" class="pointer">
+<img id="img24" src="dot.png" width="1%" hspace="2%" onclick="dotposition(24)" class="pointer">
+<img id="img25" src="dot.png" width="1%" hspace="2%" onclick="dotposition(25)" class="pointer">
+<img id="img26" src="dot.png" width="1%" hspace="2%" onclick="dotposition(26)" class="pointer">
+<img id="img27" src="dot.png" width="1%" hspace="2%" onclick="dotposition(27)" class="pointer">
+<img id="img28" src="dot.png" width="1%" hspace="2%" onclick="dotposition(28)" class="pointer">
+<img id="img29" src="dot.png" width="1%" hspace="2%" onclick="dotposition(29)" class="pointer">
+<img id="img30" src="dot.png" width="1%" hspace="2%" onclick="dotposition(30)" class="pointer">
+
+<br><br>
+<img id="img31" src="dot.png" width="1%" hspace="2%" onclick="dotposition(31)" class="pointer">
+<img id="img32" src="dot.png" width="1%" hspace="2%" onclick="dotposition(32)" class="pointer">
+<img id="img33" src="dot.png" width="1%" hspace="2%" onclick="dotposition(33)" class="pointer">
+<img id="img34" src="dot.png" width="1%" hspace="2%" onclick="dotposition(34)" class="pointer">
+<img id="img35" src="dot.png" width="1%" hspace="2%" onclick="dotposition(35)" class="pointer">
+<img id="img36" src="dot.png" width="1%" hspace="2%" onclick="dotposition(36)" class="pointer">
+<img id="img37" src="dot.png" width="1%" hspace="2%" onclick="dotposition(37)" class="pointer">
+<img id="img38" src="dot.png" width="1%" hspace="2%" onclick="dotposition(38)" class="pointer">
+<img id="img39" src="dot.png" width="1%" hspace="2%" onclick="dotposition(39)" class="pointer">
+<img id="img40" src="dot.png" width="1%" hspace="2%" onclick="dotposition(40)" class="pointer">
+
+<br><br>
+<img id="img41" src="dot.png" width="1%" hspace="2%" onclick="dotposition(41)" class="pointer">
+<img id="img42" src="dot.png" width="1%" hspace="2%" onclick="dotposition(42)" class="pointer">
+<img id="img43" src="dot.png" width="1%" hspace="2%" onclick="dotposition(43)" class="pointer">
+<img id="img44" src="dot.png" width="1%" hspace="2%" onclick="dotposition(44)" class="pointer">
+<img id="img45" src="dot.png" width="1%" hspace="2%" onclick="dotposition(45)" class="pointer">
+<img id="img46" src="dot.png" width="1%" hspace="2%" onclick="dotposition(46)" class="pointer">
+<img id="img47" src="dot.png" width="1%" hspace="2%" onclick="dotposition(47)" class="pointer">
+<img id="img48" src="dot.png" width="1%" hspace="2%" onclick="dotposition(48)" class="pointer">
+<img id="img49" src="dot.png" width="1%" hspace="2%" onclick="dotposition(49)" class="pointer">
+<img id="img50" src="dot.png" width="1%" hspace="2%" onclick="dotposition(50)" class="pointer">
+
+<br><br>
+<img id="img51" src="dot.png" width="1%" hspace="2%" onclick="dotposition(51)" class="pointer">
+<img id="img52" src="dot.png" width="1%" hspace="2%" onclick="dotposition(52)" class="pointer">
+<img id="img53" src="dot.png" width="1%" hspace="2%" onclick="dotposition(53)" class="pointer">
+<img id="img54" src="dot.png" width="1%" hspace="2%" onclick="dotposition(54)" class="pointer">
+<img id="img55" src="dot.png" width="1%" hspace="2%" onclick="dotposition(55)" class="pointer">
+<img id="img56" src="dot.png" width="1%" hspace="2%" onclick="dotposition(56)" class="pointer">
+<img id="img57" src="dot.png" width="1%" hspace="2%" onclick="dotposition(57)" class="pointer">
+<img id="img58" src="dot.png" width="1%" hspace="2%" onclick="dotposition(58)" class="pointer">
+<img id="img59" src="dot.png" width="1%" hspace="2%" onclick="dotposition(59)" class="pointer">
+<img id="img60" src="dot.png" width="1%" hspace="2%" onclick="dotposition(60)" class="pointer">
+
+<br><br>
+<img id="img61" src="dot.png" width="1%" hspace="2%" onclick="dotposition(61)" class="pointer">
+<img id="img62" src="dot.png" width="1%" hspace="2%" onclick="dotposition(62)" class="pointer">
+<img id="img63" src="dot.png" width="1%" hspace="2%" onclick="dotposition(63)" class="pointer">
+<img id="img64" src="dot.png" width="1%" hspace="2%" onclick="dotposition(64)" class="pointer">
+<img id="img65" src="dot.png" width="1%" hspace="2%" onclick="dotposition(65)" class="pointer">
+<img id="img66" src="dot.png" width="1%" hspace="2%" onclick="dotposition(66)" class="pointer">
+<img id="img67" src="dot.png" width="1%" hspace="2%" onclick="dotposition(67)" class="pointer">
+<img id="img68" src="dot.png" width="1%" hspace="2%" onclick="dotposition(68)" class="pointer">
+<img id="img69" src="dot.png" width="1%" hspace="2%" onclick="dotposition(69)" class="pointer">
+<img id="img70" src="dot.png" width="1%" hspace="2%" onclick="dotposition(70)" class="pointer">
+
+<br><br>
+<img id="img71" src="dot.png" width="1%" hspace="2%" onclick="dotposition(71)" class="pointer">
+<img id="img72" src="dot.png" width="1%" hspace="2%" onclick="dotposition(72)" class="pointer">
+<img id="img73" src="dot.png" width="1%" hspace="2%" onclick="dotposition(73)" class="pointer">
+<img id="img74" src="dot.png" width="1%" hspace="2%" onclick="dotposition(74)" class="pointer">
+<img id="img75" src="dot.png" width="1%" hspace="2%" onclick="dotposition(75)" class="pointer">
+<img id="img76" src="dot.png" width="1%" hspace="2%" onclick="dotposition(76)" class="pointer">
+<img id="img77" src="dot.png" width="1%" hspace="2%" onclick="dotposition(77)" class="pointer">
+<img id="img78" src="dot.png" width="1%" hspace="2%" onclick="dotposition(78)" class="pointer">
+<img id="img79" src="dot.png" width="1%" hspace="2%" onclick="dotposition(79)" class="pointer">
+<img id="img80" src="dot.png" width="1%" hspace="2%" onclick="dotposition(80)" class="pointer">
+
+<br><br>
+<img id="img81" src="dot.png" width="1%" hspace="2%" onclick="dotposition(81)" class="pointer">
+<img id="img82" src="dot.png" width="1%" hspace="2%" onclick="dotposition(82)" class="pointer">
+<img id="img83" src="dot.png" width="1%" hspace="2%" onclick="dotposition(83)" class="pointer">
+<img id="img84" src="dot.png" width="1%" hspace="2%" onclick="dotposition(84)" class="pointer">
+<img id="img85" src="dot.png" width="1%" hspace="2%" onclick="dotposition(85)" class="pointer">
+<img id="img86" src="dot.png" width="1%" hspace="2%" onclick="dotposition(86)" class="pointer">
+<img id="img87" src="dot.png" width="1%" hspace="2%" onclick="dotposition(87)" class="pointer">
+<img id="img88" src="dot.png" width="1%" hspace="2%" onclick="dotposition(88)" class="pointer">
+<img id="img89" src="dot.png" width="1%" hspace="2%" onclick="dotposition(89)" class="pointer">
+<img id="img90" src="dot.png" width="1%" hspace="2%" onclick="dotposition(90)" class="pointer">
+
+<br><br>
+<img id="img91" src="dot.png" width="1%" hspace="2%" onclick="dotposition(91)" class="pointer">
+<img id="img92" src="dot.png" width="1%" hspace="2%" onclick="dotposition(92)" class="pointer">
+<img id="img93" src="dot.png" width="1%" hspace="2%" onclick="dotposition(93)" class="pointer">
+<img id="img94" src="dot.png" width="1%" hspace="2%" onclick="dotposition(94)" class="pointer">
+<img id="img95" src="dot.png" width="1%" hspace="2%" onclick="dotposition(95)" class="pointer">
+<img id="img96" src="dot.png" width="1%" hspace="2%" onclick="dotposition(96)" class="pointer">
+<img id="img97" src="dot.png" width="1%" hspace="2%" onclick="dotposition(97)" class="pointer">
+<img id="img98" src="dot.png" width="1%" hspace="2%" onclick="dotposition(98)" class="pointer">
+<img id="img99" src="dot.png" width="1%" hspace="2%" onclick="dotposition(99)" class="pointer">
+<img id="img100" src="dot.png" width="1%" hspace="2%" onclick="dotposition(100)" class="pointer">
+
+<br><br>
+
+
+</div>
+
+<script>
+
+    square = []
+    var last = 0;
+    var dot;
+    var i = 1;
+    var cx, cy, nx, ny;
+    nx = 10;
+    ny = 10;
+
+    function dotposition(number) {
+        dot = number;
+        cx = $('#img1').width() / 2;
+        cy = $('#img1').height() / 2;
+    }
+
+    var l;
+    win = [];
+
+    function checksquares() {
+
+        for(l=1;l<square.length;l++){
+            if(square[l].formed!=4){
+                break;
+            }
+            else {
+                continue;
+            }
+        }
+        if (l == square.length) {
+            console.log(win)
+            c1 = 0;
+            c2 = 0;
+            for (p = 1; p < win.length; p++) {
+                if (win[p] == "red") {
+                    c1++;
+                }
+                else {
+                    c2++;
+                }
+            }
+            if (c1 > c2) {
+                winner = 'red'
+            }
+            else if (c1 < c2) {
+                winner = 'blue'
+            }
+            else {
+                winner = "It's a tie";
+            }
+            window.alert("game over; red:" + c1 + "and blue:" + c2 + ":winner is " + winner);
+
+        }
+    }
+
+    var found = false;
+
+    var gonethrough = false;
+
+
+    coordinates = [];
+    $("img[id*='img']", document.body).click(function (event) {
+
+        var offset = $(this).offset();
+        event.stopPropagation();
+        coordinates[dot] = {
+            x: offset.left + cx,
+            y: offset.top + cy
+        };
+
+        var count = 0;
+
+        function checkboundaryconditions(integer) {
+
+            if(integer<=nx || integer%nx==1 || integer%nx==0 || integer>nx*(ny-1))
+                return 1;
+            else return 0;
+        }
+
+        function checkvalidity(a) {
+            arr = []
+            if(a+1<=nx*ny){
+                arr.push(a+1)
+            }
+            if(a-1>0){
+                arr.push(a-1)
+            }
+            if(a+nx<=nx*ny){
+                arr.push(a+nx)
+            }
+            if(a-nx>0){
+                arr.push(a-nx)
+            }
+            return arr;
+        }
+
+        if (i % 2 == 0 && i % 4 != 0) {
+
+            newarr = checkvalidity(dot);
+            if(newarr.indexOf(last)!=-1) {
+
+                var cnv = document.getElementById("myCanvas");
+                var jg = new jsGraphics(cnv);
+
+                var minimum;
+                if (dot < last) {
+                    minimum = dot
+                }
+
+                else {
+                    minimum = last;
+                }
+
+                var limit;
+
+                if (checkboundaryconditions(dot) && checkboundaryconditions(last)) {
+                    limit = 1;
+                }
+                else {
+                    limit = 2;
+                }
+
+                if (minimum <= square.length - 1) {
+                    for (k = minimum; k >= 1; k--) {
+                        if (limit == count) {
+                            break;
+                        }
+
+                        if (square[k].list.indexOf(dot) != -1 && square[k].list.indexOf(last) != -1) {
+                            count++;
+                            square[k].formed++;
+                            if (square[k].formed == 4) {
+                                win[k] = 'red';
+                                found = true;
+                                console.log('win[' + k + ']=red')
+
+
+                            }
+                        }
+                    }
+                    count = 0;
+                    if(found){
+                        i--;
+                    }
+                    else{
+                        i++;
+                    }
+                    gonethrough = true
+                }
+
+                else {
+                    for (k = square.length - 1; k >= 1; k--) {
+                        if (square[k].list.indexOf(dot) != -1 && square[k].list.indexOf(last) != -1) {
+                            if (limit == count) {
+                                break;
+                            }
+                            count++;
+                            square[k].formed++;
+                            if (square[k].formed == 4) {
+                                win[k] = 'red';
+                                found = true
+                                console.log('win[' + k + ']=red')
+
+
+                            }
+                        }
+                    }
+                    count = 0
+                    if(found){
+                        i--;
+                    }
+                    else{
+                        i++;
+                    }
+                    gonethrough = true;
+                }
+
+                jg.setColor("red");
+                jg.setStroke(2);
+                jg.drawLine(coordinates[dot].x, coordinates[dot].y, coordinates[last].x, coordinates[last].y);
+                jg.paint();
+                checksquares()
+            }
+            else{
+                window.alert('wrong selection of dots')
+                dot = last = 0;
+                i-=2;
+            }
+
+
+
+        }
+        else if (i % 4 == 0) {
+
+            newarr = checkvalidity(dot);
+            if (newarr.indexOf(last) != -1) {
+
+                var cnv = document.getElementById("myCanvas");
+                var jg = new jsGraphics(cnv);
+
+                var minimum;
+                if (dot < last) {
+                    minimum = dot
+                }
+
+                else {
+                    minimum = last;
+                }
+
+                var limit;
+
+                if (checkboundaryconditions(dot) && checkboundaryconditions(last)) {
+                    limit = 1;
+                }
+                else {
+                    limit = 2;
+                }
+
+                if (minimum <= square.length - 1) {
+                    for (k = minimum; k >= 1; k--) {
+                        if (square[k].list.indexOf(dot) != -1 && square[k].list.indexOf(last) != -1) {
+                            if (limit == count) {
+                                break;
+                            }
+                            count++;
+                            square[k].formed++;
+                            if (square[k].formed == 4) {
+                                win[k] = 'blue';
+                                found = true
+                                console.log('win[' + k + ']=blue')
+
+
+                            }
+                        }
+                    }
+                    count = 0;
+                    if(found){
+                        i--;
+                    }
+                    else{
+                        i++;
+                    }
+                    gonethrough = true
+                }
+
+                else {
+                    for (k = square.length - 1; k >= 1; k--) {
+                        if (square[k].list.indexOf(dot) != -1 && square[k].list.indexOf(last) != -1) {
+                            if (limit == count) {
+                                break;
+                            }
+                            count++;
+                            square[k].formed++;
+                            if (square[k].formed == 4) {
+                                win[k] = 'blue';
+                                found = true
+                                console.log('win[' + k + ']=blue')
+
+
+                            }
+                        }
+                    }
+                    count = 0;
+                    if(found ){
+                        i--;
+                    }
+                    else{
+                        i++;
+                    }
+                    gonethrough = true
+                }
+
+                jg.setColor("blue");
+                jg.setStroke(2);
+                jg.drawLine(coordinates[dot].x, coordinates[dot].y, coordinates[last].x, coordinates[last].y);
+                jg.paint();
+                checksquares()
+            }
+            else{
+                window.alert('wrong selection of dots')
+                dot = last = 0;
+                i-=2;
+            }
+
+
+        }
+        last = dot;
+        if(!gonethrough){
+            i++;
+        }
+        else{
+            gonethrough = false
+        }
+        found = false
+
+    });
+
+    var j=0;
+    function allotsquares() {
+        for(var i = 1;i<=nx*ny;i++){
+            if(i%nx!=0 && i<=nx*(ny-1)) {
+                var arr = [];
+                arr.push(i, i + 1, i + nx, i + nx + 1)
+                j++;
+                square[j] = {
+                    list: arr,
+                    formed: 0
+                };
+            }
+        }
+    }
+
+    $(function () {
+        allotsquares();
+    })
+
+</script>
+
+</body>
+</html>
